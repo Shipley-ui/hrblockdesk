@@ -87,18 +87,30 @@
   </div>
 </footer>
 
+<!-- ✅ Smartsupp Chat (FIXED VERSION) -->
 <script>
 var _smartsupp = _smartsupp || {};
 _smartsupp.key = '8038c0fbc1e30bb63bd04ffc3d2e1081bc26a7b5';
 
-(function(d) {
-  var s = d.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = 'https://www.smartsuppchat.com/loader.js';
-  var c = d.getElementsByTagName('script')[0];
-  c.parentNode.insertBefore(s, c);
-})(document);
+window.addEventListener("load", function() {
+  (function(d) {
+    var s = d.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://www.smartsuppchat.com/loader.js";
+    var x = d.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(s, x);
+  })(document);
+});
+</script>
+
+<!-- ✅ Auto Open Chat -->
+<script>
+setTimeout(function() {
+  if (window.smartsupp) {
+    smartsupp('chat:open');
+  }
+}, 4000);
 </script>
 
 </body>
